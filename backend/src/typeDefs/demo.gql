@@ -1,0 +1,17 @@
+extend type Query {
+  getDemo(id: Int): Demo
+}
+
+extend type Mutation {
+  createDemo(demoInput: DemoInput): Demo
+}
+
+input DemoInput {
+  name: String
+}
+
+type Demo {
+  id: Int
+  name: String
+  nameWithHello: String
+}
